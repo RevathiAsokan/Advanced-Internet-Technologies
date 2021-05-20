@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ServletContext</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>driverName</param-name>
+  	<param-value>sun.jdbc.JdbcOdbcDriver</param-value>
+  </context-param>
+  
+   <context-param>
+  	<param-name>email</param-name>
+  	<param-value>revathiasokan@gmail.com</param-value>
+  </context-param>
+  
+    <servlet>
+  <servlet-name>Servlet1</servlet-name>
+  <servlet-class>ServletContext</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Servlet1</servlet-name>
+  <url-pattern>/checkServletContext</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+  <servlet-name>Servlet2</servlet-name>
+  <servlet-class>AnotherServletContext</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Servlet2</servlet-name>
+  <url-pattern>/checkAnotherServletContext</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
